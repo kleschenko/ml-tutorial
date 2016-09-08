@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  jupyter:
+    container_name: ml-tutorial
+    image: ml-tutorial
+    build:
+      context: .
+    working_dir: /notebooks
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./notebooks/:/notebooks
